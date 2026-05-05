@@ -9,19 +9,23 @@
             Console.WriteLine("Please select a solver:");
             Console.WriteLine("1. Sudoku_claude");
             Console.WriteLine("2. Sudoku_copilot");
+            Console.WriteLine("3. Sudoko leetcode");
             var selected_solver = Console.ReadKey();
 
             if (selected_solver.KeyChar == '1')
             {
                 solver = new Sudoku_claude();
             }
-            else
+            else if (selected_solver.KeyChar == '2')
             {
                 solver = new Sudoku_copilot();
             }
-
+            else
+            {
+                solver = new Sudoko_leetcode();
+            }
             // Example from the problem
-            /*
+
             char[][] board = new char[][]
             {
             new char[] {'5','3','.','.','7','.','.','.','.'},
@@ -34,25 +38,25 @@
             new char[] {'.','.','.','4','1','9','.','.','5'},
             new char[] {'.','.','.','.','8','.','.','7','9'}
             };
-            */
 
-            // Take Sudoku input from user
-            char[][] board = new char[9][];
-            Console.WriteLine("\nEnter your Sudoku puzzle row by row (use '.' for empty cells):");
-            for (int i = 0; i < 9; i++)
-            {
-                while (true)
-                {
-                    Console.Write($"Row {i + 1}: ");
-                    string? line = Console.ReadLine();
-                    if (line != null && line.Length == 9 && line.Trim().Length == 9)
-                    {
-                        board[i] = line.ToCharArray();
-                        break;
-                    }
-                    Console.WriteLine("Invalid input. Please enter exactly 9 characters (digits or '.') for the row.");
-                }
-            }
+
+            //// Take Sudoku input from user
+            //char[][] board = new char[9][];
+            //Console.WriteLine("\nEnter your Sudoku puzzle row by row (use '.' for empty cells):");
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    while (true)
+            //    {
+            //        Console.Write($"Row {i + 1}: ");
+            //        string? line = Console.ReadLine();
+            //        if (line != null && line.Length == 9 && line.Trim().Length == 9)
+            //        {
+            //            board[i] = line.ToCharArray();
+            //            break;
+            //        }
+            //        Console.WriteLine("Invalid input. Please enter exactly 9 characters (digits or '.') for the row.");
+            //    }
+            //}
 
             Console.WriteLine(Environment.NewLine + "Initial Sudoku Board:");
             solver.PrintBoard(board);
