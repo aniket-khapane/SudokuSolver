@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SudokuSolver
 {
-    internal class Sudoku_copilot: Sudoku
+    public class Sudoku_copilot: Sudoku
     {
 
         public override void SolveSudoku(char[][] board)

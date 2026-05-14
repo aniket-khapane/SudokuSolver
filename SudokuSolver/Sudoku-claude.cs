@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SudokuSolver
 {
-    internal class Sudoku_claude: Sudoku
+    public class Sudoku_claude: Sudoku
     {
         public override void SolveSudoku(char[][] board)
         {

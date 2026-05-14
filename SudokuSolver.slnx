@@ -1,4 +1,5 @@
 <Solution>
-  <Project Path="SudokuSolver.UnitTests/SudokuSolver.UnitTests.csproj" Id="7d0cff6b-32d3-4657-9bfe-725d3450119d" />
+  <Project Path="SudokuSolver.UnitTests/SudokuSolver.NUnitTests.csproj" Id="7d0cff6b-32d3-4657-9bfe-725d3450119d" />
+  <Project Path="SudokuSolver.UnitXunitTests/SudokuSolver.XunitTests.csproj" />
   <Project Path="SudokuSolver/SudokuSolver.csproj" />
 </Solution>

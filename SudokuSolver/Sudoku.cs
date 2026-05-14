@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SudokuSolver
 {
-    internal abstract class Sudoku
+    public abstract class Sudoku
     {
         public abstract void SolveSudoku(char[][] board);
 
